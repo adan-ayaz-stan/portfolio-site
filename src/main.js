@@ -12,6 +12,7 @@ import {
   IoChatbubblesSharp,
   HiArrowSmRight,
   BiArrowRightShort,
+  GiCardAceSpades,
 } from "oh-vue-icons/icons";
 
 import App from "./App.vue";
@@ -28,7 +29,8 @@ addIcons(
   HiSolidMailOpen,
   IoChatbubblesSharp,
   HiArrowSmRight,
-  BiArrowRightShort
+  BiArrowRightShort,
+  GiCardAceSpades
 );
 
 createApp(App)

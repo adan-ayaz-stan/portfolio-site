@@ -15,8 +15,18 @@
 }
 
 @font-face {
+  font-family: "Daikon SemiBold";
+  src: url(./assets/fonts/Daikon/Daikon-SemiBold.ttf);
+}
+
+@font-face {
   font-family: "Daikon Medium";
   src: url(./assets/fonts/Daikon/Daikon-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Daikon Light";
+  src: url(./assets/fonts/Daikon/Daikon-Light.ttf);
 }
 
 :root {
@@ -35,7 +45,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --color-1: #ffb400;
+  --color-1: #8448fd;
   --color-2: #111111;
   --color-3: #ffffff;
   --color-4: #2b2a2a;
@@ -80,14 +90,10 @@ button:focus-visible {
   padding: 2em;
 }
 
-* {
-  transition: all ease 0.4s;
-}
-
 [data-theme="dark"] {
   color: #666666;
 
-  --color-1: #ffb400;
+  --color-1: #d58bdd;
   --color-2: #ffffff;
   --color-3: #ffffff;
   --color-4: #e7e7e7;
@@ -97,7 +103,7 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
-    --color-1: #ffb400;
+    --color-1: #6f1ab6;
     --color-2: #111111;
     --color-3: #ffffff;
     --color-4: #2b2a2a;

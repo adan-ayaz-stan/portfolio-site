@@ -2,25 +2,33 @@
 import Sidebar from "./Sidebar.vue";
 import CurtainVue from "./Curtain.vue";
 import MoreAboutMe from "./MoreAboutMe.vue";
+import { ref } from "vue";
+
+const showModal = ref(false);
+
+function closeModal() {
+  showModal.value = false;
+}
 </script>
 
 <template>
-  <div class="main-home w-screen sm:h-fit relative py-16 lg:py-4">
+  <div class="main-home w-screen sm:h-fit relative py-16 lg:py-0">
     <CurtainVue />
 
-    <MoreAboutMe />
+    <Transition name="fade">
+      <MoreAboutMe v-if="showModal" :custom="closeModal" />
+    </Transition>
 
     <div
-      class="h-full w-full grid grid-cols-1 md:grid-cols-2 justify-center md:px-20 lg:px-28"
+      class="h-screen w-full flex flex-col md:flex-row items-center justify-center"
     >
       <!-- Profile -->
-      <div
-        class="relative w-11/12 sm:w-10/12 md:w-11/12 lg:w-10/12 p-8 mx-auto"
-      >
+      <div class="relative w-9/12 lg:w-1/2 flex items-center justify-end">
         <img
-          src="https://tunis-nextjs.vercel.app/assets/img/hero/dark.jpg"
+          src="https://i.ibb.co/N62Vx41/IMG-20230109-183541.jpg"
           alt="profile"
-          class="h-full w-full object-cover rounded-3xl shadow-xl"
+          style="max-width: 400px"
+          class="rounded-3xl shadow-xl w-full object-contain mx-auto"
           loading="lazy"
         />
       </div>
@@ -28,19 +36,21 @@ import MoreAboutMe from "./MoreAboutMe.vue";
       <!-- Content -->
 
       <div
-        class="main-screen-content w-11/12 mx-auto gap-4 flex flex-col justify-center"
+        class="main-screen-content w-full lg:w-1/2 mx-auto gap-4 flex flex-col justify-center p-4"
       >
         <div class="flex flex-row items-center lg:flex-row lg:gap-2">
-          <h1 class="text-8xl">♠</h1>
+          <h1>
+            <v-icon name="gi-card-ace-spades" scale="5.5" />
+          </h1>
 
           <div class="text-sm lg:text-xl">
-            <h1>Steve Miller</h1>
+            <h1>Adan Ayaz</h1>
             <h1>Web Developer</h1>
           </div>
         </div>
 
         <p class="w-full lg:w-5/6 leading-normal lg:leading-loose">
-          I'm a Tunisian based web designer & front‑end developer focused on
+          I'm a Pakistan based web designer & front‑end developer focused on
           crafting clean & user‑friendly experiences, I am passionate about
           building excellent software that improves the lives of those around
           me.
@@ -48,6 +58,7 @@ import MoreAboutMe from "./MoreAboutMe.vue";
 
         <button
           class="more-about-me-button w-fit flex flex-row items-center gap-2"
+          @click="showModal = true"
         >
           <p>More about me</p>
           <v-icon name="bi-arrow-right-short" class="arrow-right" scale="2.5" />
@@ -129,5 +140,17 @@ import MoreAboutMe from "./MoreAboutMe.vue";
 .more-about-me-button .arrow-right {
   background-color: var(--color-1);
   border-radius: 999px;
+}
+
+/* Tranisitons */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
