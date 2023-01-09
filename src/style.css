@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+@font-face {
+  font-family: "Daikon Black";
+  src: url(./assets/fonts/Daikon/Daikon-Black.ttf);
+}
+
 @font-face {
   font-family: "Daikon Bold";
   src: url(./assets/fonts/Daikon/Daikon-Bold.ttf);
@@ -10,16 +17,6 @@
 @font-face {
   font-family: "Daikon Medium";
   src: url(./assets/fonts/Daikon/Daikon-Medium.ttf);
-}
-
-@font-face {
-  font-family: "URW Geometric Bold";
-  src: url(./assets/fonts/URW\ Geometric/URWGeometricBold.otf);
-}
-
-@font-face {
-  font-family: "URW Geometric Medium";
-  src: url(./assets/fonts/URW\ Geometric/URWGeometricMedium.otf);
 }
 
 :root {
@@ -55,7 +52,8 @@ a:hover {
 
 h1 {
   font-size: 2.2em;
-  font-family: "Daikon Bold";
+  font-family: "Daikon Black";
+  font-weight: 800;
   line-height: 1.1;
 }
 

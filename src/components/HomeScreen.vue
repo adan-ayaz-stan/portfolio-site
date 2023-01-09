@@ -1,11 +1,14 @@
 <script setup>
 import Sidebar from "./Sidebar.vue";
 import CurtainVue from "./Curtain.vue";
+import MoreAboutMe from "./MoreAboutMe.vue";
 </script>
 
 <template>
   <div class="main-home w-screen sm:h-fit relative py-16 lg:py-4">
     <CurtainVue />
+
+    <MoreAboutMe />
 
     <div
       class="h-full w-full grid grid-cols-1 md:grid-cols-2 justify-center md:px-20 lg:px-28"
