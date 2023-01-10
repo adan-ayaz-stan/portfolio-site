@@ -84,7 +84,7 @@ function closeModal(e) {
     >
       <!-- Close Icon -->
       <div
-        class="close-icon-moreaboutme flex justify-center items-center border-2 border-gray-700 rounded-sm cursor-pointer"
+        class="close-icon-moreaboutme flex justify-center items-center rounded-sm cursor-pointer"
         @click="closeModal()"
       >
         <v-icon name="ri-close-fill" scale="1.5" />
@@ -213,6 +213,8 @@ function closeModal(e) {
 
   height: 40px;
   width: 40px;
+
+  background-color: var(--color-1);
 
   z-index: 10;
 
