@@ -79,7 +79,7 @@ function closeModal(e) {
   >
     <!-- Content -->
     <div
-      class="content-moreaboutme h-full w-10/12 border-solid border-gray-700 border-2 rounded"
+      class="content-moreaboutme h-full w-10/12 border-solid border-gray-700 border-2 rounded overflow-scroll"
       @click.stop=""
     >
       <!-- Headings -->
@@ -97,15 +97,15 @@ function closeModal(e) {
         }"
         class="headings-moreaboutme"
       >
-        <h1 class="text-9xl tracking-wider">RESUME</h1>
-        <h1 class="text-6xl">
+        <h1 class="text-6xl lg:text-9xl tracking-wider">RESUME</h1>
+        <h1 class="text-3xl lg:text-6xl">
           About <span style="color: var(--color-1)">Me</span>
         </h1>
       </div>
 
       <!-- Content -->
       <div
-        class="w-full grid grid-cols-2 px-6 overflow-scroll"
+        class="w-full grid grid-cols-1 lg:grid-cols-2 px-6"
         v-motion
         :initial="{ y: 100, opacity: 0 }"
         :visibleOnce="{
@@ -129,7 +129,7 @@ function closeModal(e) {
           </h2>
 
           <div
-            class="w-full grid grid-cols-2 auto-rows-auto items-center gap-4"
+            class="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-auto items-center gap-4"
           >
             <!--  -->
             <p v-for="item in personalInfo">
@@ -140,7 +140,7 @@ function closeModal(e) {
         </div>
 
         <!-- Right Side Content -->
-        <div class="grid grid-cols-2 grid-rows-2 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 auto-rows-auto gap-4">
           <!--  -->
           <div
             v-for="item in progressInfo"
