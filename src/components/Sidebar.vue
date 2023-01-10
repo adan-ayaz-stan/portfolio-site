@@ -122,7 +122,7 @@ export default {
   right: 0;
 
   height: 100%;
-  min-width: 100px;
+  min-width: 50px;
 
   z-index: 100;
 }
