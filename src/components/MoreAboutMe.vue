@@ -94,7 +94,7 @@ function closeModal(e) {
       <div
         v-motion
         :initial="{ y: 100, opacity: 0 }"
-        :visibleOnce="{
+        :animate="{
           y: 0,
           opacity: 1,
           transition: {
@@ -116,7 +116,7 @@ function closeModal(e) {
         class="w-full grid grid-cols-1 lg:grid-cols-2 px-6"
         v-motion
         :initial="{ y: 100, opacity: 0 }"
-        :visibleOnce="{
+        :animate="{
           y: 0,
           opacity: 1,
           transition: {
