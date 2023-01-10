@@ -79,7 +79,7 @@ function closeModal(e) {
   >
     <!-- Content -->
     <div
-      class="content-moreaboutme h-full w-10/12 border-solid border-gray-700 border-2 rounded overflow-scroll"
+      class="content-moreaboutme h-full w-11/12 lg:w-10/12 border-solid border-gray-700 border-2 rounded overflow-scroll py-12 lg:py-0"
       @click.stop=""
     >
       <!-- Headings -->
