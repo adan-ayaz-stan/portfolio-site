@@ -9,10 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^9.10.0",
     "@vueuse/motion": "^2.0.0-beta.12",
     "animejs": "^3.2.1",
     "oh-vue-icons": "^1.0.0-rc3",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue-ellipse-progress": "^2.1.1",
+    "vue3-circle-progress": "^1.0.7"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
