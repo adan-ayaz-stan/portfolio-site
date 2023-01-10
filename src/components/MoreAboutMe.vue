@@ -94,7 +94,7 @@ function closeModal(e) {
       <div
         v-motion
         :initial="{ y: 100, opacity: 0 }"
-        :animate="{
+        :enter="{
           y: 0,
           opacity: 1,
           transition: {
@@ -116,7 +116,7 @@ function closeModal(e) {
         class="w-full grid grid-cols-1 lg:grid-cols-2 px-6"
         v-motion
         :initial="{ y: 100, opacity: 0 }"
-        :animate="{
+        :enter="{
           y: 0,
           opacity: 1,
           transition: {
@@ -147,7 +147,7 @@ function closeModal(e) {
           </div>
         </div>
 
-        <!-- Right Side Content -->
+        <!-- History || Right Side Content -->
         <div class="grid grid-cols-1 lg:grid-cols-2 auto-rows-auto gap-4">
           <!--  -->
           <div
@@ -166,7 +166,9 @@ function closeModal(e) {
             </p>
           </div>
         </div>
+        <!--  -->
       </div>
+      <!--  -->
     </div>
   </div>
 </template>
