@@ -3,6 +3,7 @@ import PersonalInformationVue from "./MoreAboutMe-mini-comps/PersonalInformation
 import SkillsInformationVue from "./MoreAboutMe-mini-comps/SkillsInformation.vue";
 
 import { defineProps } from "vue";
+import WorkExperience from "./MoreAboutMe-mini-comps/WorkExperience.vue";
 
 const { custom } = defineProps(["custom"]);
 
@@ -13,7 +14,7 @@ function closeModal(e) {
 
 <template>
   <div
-    class="main-moreaboutme h-full w-full flex justify-center items-center py-12"
+    class="main-moreaboutme h-full w-full flex justify-center items-center py-20 md:py-12"
     @click="closeModal(e)"
   >
     <!-- Content -->
@@ -31,6 +32,7 @@ function closeModal(e) {
 
       <PersonalInformationVue />
       <SkillsInformationVue />
+      <WorkExperience />
     </div>
   </div>
 </template>
