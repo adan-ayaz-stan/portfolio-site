@@ -34,8 +34,10 @@ const workExperienceData = [
   <div>
     <div class="seperator" />
 
+    <h1 class="w-full text-center pt-16 pb-8 uppercase">Work Experience</h1>
+
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 py-16 px-0 lg:px-8 gap-4"
+      class="grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-8 gap-4"
       v-motion
       :initial="{ y: 100, opacity: 0 }"
       :enter="{
@@ -51,7 +53,10 @@ const workExperienceData = [
     >
       <!-- Single Work experience component -->
 
-      <div class="flex flex-row p-4 gap-4" v-for="item in workExperienceData">
+      <div
+        class="flex flex-row p-4 gap-4 pb-16"
+        v-for="item in workExperienceData"
+      >
         <div
           class="relative"
           style="
@@ -115,11 +120,4 @@ const workExperienceData = [
   </div>
 </template>
 
-<style scoped>
-.seperator {
-  width: 100%;
-  height: 2px;
-
-  background: radial-gradient(circle, var(--color-1) 0%, var(--color-2) 80%);
-}
-</style>
+<style scoped></style>

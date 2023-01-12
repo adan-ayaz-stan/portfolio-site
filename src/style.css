@@ -86,8 +86,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card {
-  padding: 2em;
+.seperator {
+  width: 100%;
+  height: 2px;
+
+  background: radial-gradient(circle, var(--color-1) 0%, var(--color-2) 80%);
 }
 
 [data-theme="dark"] {

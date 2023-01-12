@@ -1,4 +1,4 @@
-import VueEllipseProgress from 'vue3-circle-progress';
+import VueEllipseProgress from "vue3-circle-progress";
 import { createApp } from "vue";
 import { MotionPlugin } from "@vueuse/motion";
 // import VueEllipseProgress from "vue-ellipse-progress";
@@ -16,6 +16,7 @@ import {
   BiArrowRightShort,
   GiCardAceSpades,
   RiCloseFill,
+  RiPencilRuler2Fill,
 } from "oh-vue-icons/icons";
 
 import App from "./App.vue";
@@ -34,7 +35,8 @@ addIcons(
   HiArrowSmRight,
   BiArrowRightShort,
   GiCardAceSpades,
-  RiCloseFill
+  RiCloseFill,
+  RiPencilRuler2Fill
 );
 
 createApp(App)

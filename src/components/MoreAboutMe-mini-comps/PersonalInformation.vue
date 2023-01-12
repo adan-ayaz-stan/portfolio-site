@@ -46,12 +46,19 @@
       </h2>
 
       <div
-        class="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-auto items-center gap-4"
+        class="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-auto items-center gap-4 p-4"
       >
         <!--  -->
         <p v-for="item in personalInfo">
-          <span style="font-family: 'Daikon Light'">{{ item.label }}:</span>
-          {{ item.value }}
+          <span style="font-family: 'Daikon Light'">{{ item.label }}: </span>
+
+          <!-- Rendering links  -->
+          <a :href="item.link" v-if="item.type == 'link'">{{ item.value }}</a>
+
+          <!--  -->
+          <span v-else :style="{ color: item.color ? item.color : '' }">{{
+            item.value
+          }}</span>
         </p>
       </div>
     </div>
@@ -114,17 +121,11 @@ const personalInfo = [
     label: "Age",
     value: "18",
   },
-  {
-    label: "Nationality",
-    value: "Pakistani",
-  },
+
   {
     label: "Freelance",
     value: "Available",
-  },
-  {
-    label: "Address",
-    value: "Sargodha, Punjab",
+    color: "#39e75f",
   },
   {
     label: "Phone Number",
@@ -136,7 +137,21 @@ const personalInfo = [
   },
   {
     label: "Twitter",
-    value: "www.twitter.com/AdanAyaz1",
+    link: "https://twitter.com/AdanAyaz1",
+    value: "AdanAyaz1",
+    type: "link",
+  },
+  {
+    label: "Github",
+    link: "https://github.com/adan-ayaz-stan",
+    value: "adan-ayaz-stan",
+    type: "link",
+  },
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/adan-ayaz-821025191/",
+    value: "Adan Ayaz",
+    type: "link",
   },
   {
     label: "Languages",

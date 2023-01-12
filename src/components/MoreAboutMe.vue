@@ -4,6 +4,7 @@ import SkillsInformationVue from "./MoreAboutMe-mini-comps/SkillsInformation.vue
 
 import { defineProps } from "vue";
 import WorkExperience from "./MoreAboutMe-mini-comps/WorkExperience.vue";
+import PersonalProjects from "./MoreAboutMe-mini-comps/PersonalProjects.vue";
 
 const { custom } = defineProps(["custom"]);
 
@@ -33,6 +34,7 @@ function closeModal(e) {
       <PersonalInformationVue />
       <SkillsInformationVue />
       <WorkExperience />
+      <PersonalProjects />
     </div>
   </div>
 </template>

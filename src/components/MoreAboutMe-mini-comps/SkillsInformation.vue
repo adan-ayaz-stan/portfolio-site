@@ -75,11 +75,4 @@ const array = [
   </div>
 </template>
 
-<style scoped>
-.seperator {
-  width: 100%;
-  height: 2px;
-
-  background: radial-gradient(circle, var(--color-1) 0%, var(--color-2) 80%);
-}
-</style>
+<style scoped></style>
