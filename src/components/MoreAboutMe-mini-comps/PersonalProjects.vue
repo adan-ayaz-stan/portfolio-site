@@ -1,14 +1,65 @@
-<script setup>
+<script setup lang="ts">
 const projectsData = [
   {
     name: "HOD Cult Site",
     tasks: [
-      "Building the landing screen such that login is only available to the user when specific code of letters is active. In other words, a normal passer by cannot login.",
-      "Built authentication logic for the sake of learning authentication and cookie handling.",
-      "Built a landing screen for register/login",
+      "Build Landing Page",
+      "Code landing page logic",
+      "Apply cookies logic",
+      "Apply form validation",
+      "Code authentication logic",
+      "Set login page",
+      "Hash passwords",
+      "Store logins in database",
     ],
-    technologies: [""],
-    goal: "",
+    technologies: [
+      "NextJS",
+      "React",
+      "Recoil",
+      "Firebase",
+      "jsonwebtoken",
+      "bcrypt",
+      "cookies-next",
+      "formik",
+    ],
+    goal: "Understanding the general procedure of authentication in web applications.",
+  },
+  {
+    name: "The Bottle Haus Project",
+    tasks: [
+      "Built pages in several routes in NextJS",
+      "Fetching data from MongoDB database + rendering",
+      "Applied filtering in the shopping route",
+      "Applied dynamic routes for products",
+      "Built a global shopping cart and it's logic",
+    ],
+    technologies: [
+      "NextJS",
+      "React",
+      "Recoil",
+      "Prisma",
+      "Swiper",
+      "react-hook-form",
+    ],
+    goal: "Analyzing the challenges faced in building an e-commerce site.",
+  },
+  {
+    name: "Drove Animated Site",
+    tasks: [
+      "Built a landing page",
+      "Built a splash screen",
+      "Animated parts of the application using Framer Motion",
+    ],
+    technologies: [
+      "NextJS",
+      "React",
+      "Recoil",
+      "Framer Motion",
+      "Swiper",
+      "react-scroll-parallax",
+      "react-animated-cursor",
+    ],
+    goal: "Showcase my ability to create visually engaging and interactive user experiences.",
   },
 ];
 </script>
@@ -21,7 +72,7 @@ const projectsData = [
 
     <div class="grid grid-cols-1 auto-rows-auto">
       <!-- Project single component -->
-      <div class="border-2 flex flex-row">
+      <div v-for="item in projectsData" class="flex flex-row gap-4 px-12">
         <div
           class="relative"
           style="
@@ -42,24 +93,54 @@ const projectsData = [
         </div>
         <!--  -->
 
-        <div v-for="item in projectsData" class="flex flex-col gap-2">
-          <h2>Project name</h2>
+        <div class="w-full flex flex-col gap-2">
+          <h2
+            class="uppercase text-lg lg:text-xl pt-3"
+            style="font-family: 'Daikon Bold'"
+          >
+            {{ item.name }}
+          </h2>
 
-          <div>
-            <h2>Tasks Achieved:</h2>
+          <hr
+            class="border-none"
+            style="
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                var(--color-1) 0%,
+                var(--color-2) 87%
+              );
+            "
+          />
 
-            <ul class="list-disc">
+          <div class="pl-4">
+            <h2 class="underline text-lg">Tasks Achieved:</h2>
+
+            <ul
+              class="grid auto-rows-auto grid-cols-2 pl-4 text-sm list-inside list-disc"
+              style="font-family: 'Daikon Light'"
+            >
               <li v-for="i in item.tasks">{{ i }}</li>
             </ul>
           </div>
 
-          <p>
-            Technologies used:
-            <span v-for="i in item.technologies">{{ i }}</span>
-          </p>
+          <div class="pl-4">
+            <h2 class="underline text-lg">Technologies used:</h2>
+            <ul
+              class="grid auto-rows-auto grid-cols-2 pl-4 text-sm list-inside list-disc"
+              style="font-family: 'Daikon Light'"
+            >
+              <li v-for="i in item.technologies">{{ i }}</li>
+            </ul>
+          </div>
 
-          <p>
-            Goal of the project: <span>{{ item.goal }}</span>
+          <p class="py-4 pb-8">
+            <span
+              class="uppercase tracking-wider"
+              style="font-family: 'Daikon Bold'"
+              >Goal of the project:
+            </span>
+            <span class="text-green-500">{{ item.goal }}</span>
           </p>
         </div>
       </div>
