@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar.vue";
 
 import { useRouterStore } from "./store/routing";
 import PortfolioScreen from "./views/PortfolioScreen.vue";
+import ContactScreen from "./views/ContactScreen.vue";
 
 const store = useRouterStore();
 </script>
@@ -13,5 +14,6 @@ const store = useRouterStore();
   <HomeScreenVue v-if="store.route == 'home'" />
   <AboutScreenVue v-if="store.route == 'about'" />
   <PortfolioScreen v-if="store.route == 'portfolio'" />
+  <ContactScreen v-if="store.route == 'contact'" />
   <Sidebar />
 </template>

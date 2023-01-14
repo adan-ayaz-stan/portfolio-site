@@ -15,6 +15,8 @@ import {
   GiCardAceSpades,
   RiCloseFill,
   RiPencilRuler2Fill,
+  IoMap,
+  FaPhoneSquareAlt,
 } from "oh-vue-icons/icons";
 
 import App from "./App.vue";
@@ -38,7 +40,9 @@ addIcons(
   BiArrowRightShort,
   GiCardAceSpades,
   RiCloseFill,
-  RiPencilRuler2Fill
+  RiPencilRuler2Fill,
+  IoMap,
+  FaPhoneSquareAlt
 );
 
 createApp(App)
