@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm.vue";
 </script>
 
 <template>
-  <div style="background: var(--color-2)">
+  <div class="h-fit lg:h-screen" style="background: var(--color-2)">
     <!-- Headings -->
     <div
       v-motion
@@ -20,8 +20,8 @@ import ContactForm from "../components/ContactForm.vue";
       class="headings-portfolioscreen"
     >
       <h1 class="text-5xl lg:text-9xl tracking-wider">Contact</h1>
-      <h1 class="text-3xl lg:text-6xl">
-        My <span style="color: var(--color-1)">Portfolio</span>
+      <h1 class="w-full text-3xl lg:text-6xl">
+        Get in <span style="color: var(--color-1)">Touch</span>
       </h1>
     </div>
 

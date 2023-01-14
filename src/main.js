@@ -17,6 +17,11 @@ import {
   RiPencilRuler2Fill,
   IoMap,
   FaPhoneSquareAlt,
+  CoTelegramPlane,
+  CoFacebookF,
+  CoLinkedinIn,
+  LaGithubAlt,
+  CoTwitter,
 } from "oh-vue-icons/icons";
 
 import App from "./App.vue";
@@ -42,7 +47,12 @@ addIcons(
   RiCloseFill,
   RiPencilRuler2Fill,
   IoMap,
-  FaPhoneSquareAlt
+  FaPhoneSquareAlt,
+  CoTelegramPlane,
+  CoFacebookF,
+  CoLinkedinIn,
+  LaGithubAlt,
+  CoTwitter
 );
 
 createApp(App)

@@ -20,7 +20,7 @@ import PortfolioProjects from "../components/PortfolioProjects.vue";
       class="headings-portfolioscreen"
     >
       <h1 class="text-5xl lg:text-9xl tracking-wider">Works</h1>
-      <h1 class="text-3xl lg:text-6xl">
+      <h1 class="w-full text-3xl lg:text-6xl">
         My <span style="color: var(--color-1)">Portfolio</span>
       </h1>
     </div>

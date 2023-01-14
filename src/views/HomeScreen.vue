@@ -65,7 +65,6 @@ function closeModal() {
         </button>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -100,6 +99,7 @@ function closeModal() {
 
   margin: 1.5em;
 
+  color: var(--color-3);
   background: var(--color-2);
 
   border: solid 1px var(--color-1);

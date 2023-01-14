@@ -87,7 +87,7 @@ const workExperienceData = [
             name="bi-briefcase-fill"
             scale="2.5"
             class="rounded-full p-2"
-            style="background-color: var(--color-1)"
+            style="background-color: var(--color-1); color: var(--color-3)"
           />
         </div>
 

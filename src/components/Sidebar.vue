@@ -131,11 +131,13 @@ function changeMode() {
 }
 
 .icon {
+  color: var(--color-3);
   background-color: var(--color-4);
   transition: all ease 0.3s;
 }
 
 .icon-mode-change {
+  color: var(--color-3);
   background-color: var(--color-4);
   transition: all ease 0.4s;
   z-index: 500;
