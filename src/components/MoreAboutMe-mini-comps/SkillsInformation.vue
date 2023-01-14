@@ -4,31 +4,31 @@ import "vue3-circle-progress/dist/circle-progress.css";
 const array = [
   {
     name: "Html",
-    level: 60,
+    logo: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
   },
   {
     name: "Css",
-    level: 85,
+    logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
   },
   {
     name: "JavaScript",
-    level: 95,
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
   },
   {
     name: "TypeScript",
-    level: 85,
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
   },
   {
     name: "React",
-    level: 85,
+    logo: "https://cdn-icons-png.flaticon.com/512/1260/1260667.png",
   },
   {
     name: "NextJS",
-    level: 85,
+    logo: "https://static-00.iconduck.com/assets.00/next-js-icon-512x512-zuauazrk.png",
   },
   {
     name: "Vue",
-    level: 65,
+    logo: "https://cdn.iconscout.com/icon/free/png-256/vuejs-3-1175070.png",
   },
 ];
 </script>
@@ -53,19 +53,12 @@ const array = [
         },
       }"
     >
-      <div
-        class="progress-wrapper-circular flex flex-col items-center gap-2"
-        v-for="item in array"
-      >
-        <vue-ellip
-          :percent="item.level"
-          :size="120"
-          :fill-color="'#8448fd'"
-          :border-width="8"
-          :border-bg-width="8"
-          :show-percent="true"
-          :transition="2500"
-          class="circular-progress"
+      <div class="flex flex-col items-center gap-2" v-for="item in array">
+        <img
+          :src="item.logo"
+          alt="logo"
+          class="object-cover"
+          style="height: 100px; width: 100px"
         />
         <p class="uppercase text-lg" style="font-family: 'Daikon SemiBold'">
           {{ item.name }}

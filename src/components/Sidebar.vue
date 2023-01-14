@@ -1,32 +1,41 @@
-<script scoped>
-import { ref } from "vue";
+<script setup>
+import { storeToRefs } from "pinia";
+import { ref, watch } from "vue";
 import homeIcon from "../assets/home-icon.png";
+
+import { useRouterStore } from "../store/routing";
+
+const store = useRouterStore();
+
+store.$subscribe((mutaution, state) => {
+  console.log("State changed");
+});
 
 const sampleArray = [
   {
-    img: homeIcon,
     text: "Home",
     iconName: "hi-solid-home",
+    activeValue: "home",
   },
   {
-    img: homeIcon,
     text: "About",
     iconName: "bi-person-fill",
+    activeValue: "about",
   },
   {
-    img: homeIcon,
     text: "Contact",
     iconName: "hi-solid-mail-open",
+    activeValue: "contact",
   },
   {
-    img: homeIcon,
     text: "Portfolio",
     iconName: "bi-briefcase-fill",
+    activeValue: "portfolio",
   },
   {
-    img: homeIcon,
     text: "Tweets",
     iconName: "io-chatbubbles-sharp",
+    activeValue: "tweets",
   },
 ];
 
@@ -43,17 +52,6 @@ function changeMode() {
   }
   return mode;
 }
-
-export default {
-  data() {
-    return {
-      image: homeIcon,
-      sampleArray: sampleArray,
-      changeMode,
-      theme,
-    };
-  },
-};
 </script>
 
 <template>
@@ -103,6 +101,11 @@ export default {
             ease: 'easeOut',
           },
         }"
+        :style="{
+          backgroundColor:
+            items.activeValue == store.route ? 'var(--color-1)' : '',
+        }"
+        @click="store.setRoute(items.activeValue)"
       >
         <p>
           {{ items.text }}

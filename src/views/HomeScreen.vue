@@ -1,7 +1,7 @@
 <script setup>
-import Sidebar from "./Sidebar.vue";
-import CurtainVue from "./Curtain.vue";
-import MoreAboutMe from "./MoreAboutMe.vue";
+import Sidebar from "../components/Sidebar.vue";
+import CurtainVue from "../components/Curtain.vue";
+import MoreAboutMe from "../components/MoreAboutMe.vue";
 import { ref } from "vue";
 
 const showModal = ref(false);
@@ -66,7 +66,6 @@ function closeModal() {
       </div>
     </div>
 
-    <Sidebar />
   </div>
 </template>
 

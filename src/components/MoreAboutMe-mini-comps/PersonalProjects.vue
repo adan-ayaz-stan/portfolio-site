@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import projectPersonalProjects from "./projectPersonalProjects.vue";
+
 const projectsData = [
   {
     name: "HOD Cult Site",
@@ -23,6 +25,10 @@ const projectsData = [
       "formik",
     ],
     goal: "Understanding the general procedure of authentication in web applications.",
+    link: {
+      github: "https://github.com/adan-ayaz-stan/hod-cult-website",
+      hosted: "https://hod-cult-website.vercel.app/",
+    },
   },
   {
     name: "The Bottle Haus Project",
@@ -42,6 +48,10 @@ const projectsData = [
       "react-hook-form",
     ],
     goal: "Analyzing the challenges faced in building an e-commerce site.",
+    link: {
+      github: "https://github.com/adan-ayaz-stan/the-bottle-haus-project",
+      hosted: "https://adan-ayaz-project-03.vercel.app/",
+    },
   },
   {
     name: "Drove Animated Site",
@@ -60,90 +70,38 @@ const projectsData = [
       "react-animated-cursor",
     ],
     goal: "Showcase my ability to create visually engaging and interactive user experiences.",
+    link: {
+      github: "https://github.com/adan-ayaz-stan/drove-animated-site",
+      hosted: "http://drove-animated-site.vercel.app/",
+    },
   },
 ];
 </script>
 
 <template>
-  <div>
+  <div class="pb-16">
     <div class="seperator" />
 
-    <h1 class="w-full text-center pt-16 pb-8 uppercase">Personal Projects</h1>
+    <h1
+      class="w-full text-center pt-16 pb-8 uppercase"
+      v-motion
+      :initial="{ y: 60, opacity: 0 }"
+      :visibleOnce="{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 700,
+          type: 'keyframes',
+          ease: 'easeOut',
+        },
+      }"
+    >
+      Personal Projects
+    </h1>
 
     <div class="grid grid-cols-1 auto-rows-auto">
       <!-- Project single component -->
-      <div v-for="item in projectsData" class="flex flex-row gap-4 px-12">
-        <div
-          class="relative"
-          style="
-            background: linear-gradient(
-              90deg,
-              var(--color-2) 48%,
-              var(--color-4) 49%,
-              var(--color-2) 50%
-            );
-          "
-        >
-          <v-icon
-            name="ri-pencil-ruler-2-fill"
-            scale="2.5"
-            class="rounded-full p-2"
-            style="background-color: var(--color-1)"
-          />
-        </div>
-        <!--  -->
-
-        <div class="w-full flex flex-col gap-2">
-          <h2
-            class="uppercase text-lg lg:text-xl pt-3"
-            style="font-family: 'Daikon Bold'"
-          >
-            {{ item.name }}
-          </h2>
-
-          <hr
-            class="border-none"
-            style="
-              height: 1px;
-              background: linear-gradient(
-                90deg,
-                var(--color-1) 0%,
-                var(--color-2) 87%
-              );
-            "
-          />
-
-          <div class="pl-4">
-            <h2 class="underline text-lg">Tasks Achieved:</h2>
-
-            <ul
-              class="grid auto-rows-auto grid-cols-2 pl-4 text-sm list-inside list-disc"
-              style="font-family: 'Daikon Light'"
-            >
-              <li v-for="i in item.tasks">{{ i }}</li>
-            </ul>
-          </div>
-
-          <div class="pl-4">
-            <h2 class="underline text-lg">Technologies used:</h2>
-            <ul
-              class="grid auto-rows-auto grid-cols-2 pl-4 text-sm list-inside list-disc"
-              style="font-family: 'Daikon Light'"
-            >
-              <li v-for="i in item.technologies">{{ i }}</li>
-            </ul>
-          </div>
-
-          <p class="py-4 pb-8">
-            <span
-              class="uppercase tracking-wider"
-              style="font-family: 'Daikon Bold'"
-              >Goal of the project:
-            </span>
-            <span class="text-green-500">{{ item.goal }}</span>
-          </p>
-        </div>
-      </div>
+      <projectPersonalProjects v-for="item in projectsData" :data="item" />
     </div>
   </div>
 </template>

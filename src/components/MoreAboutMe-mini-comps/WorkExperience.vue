@@ -34,7 +34,22 @@ const workExperienceData = [
   <div>
     <div class="seperator" />
 
-    <h1 class="w-full text-center pt-16 pb-8 uppercase">Work Experience</h1>
+    <h1
+      class="w-full text-center pt-16 pb-8 uppercase"
+      v-motion
+      :initial="{ y: 60, opacity: 0 }"
+      :visibleOnce="{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 700,
+          type: 'keyframes',
+          ease: 'easeOut',
+        },
+      }"
+    >
+      Work Experience
+    </h1>
 
     <div
       class="grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-8 gap-4"
