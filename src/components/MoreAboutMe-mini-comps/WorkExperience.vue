@@ -35,7 +35,7 @@ const workExperienceData = [
     <div class="seperator" />
 
     <h1
-      class="w-full text-center pt-16 pb-8 uppercase"
+      class="w-full text-center px-2 pt-16 pb-8 uppercase"
       v-motion
       :initial="{ y: 60, opacity: 0 }"
       :visibleOnce="{
