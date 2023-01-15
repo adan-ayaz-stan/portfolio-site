@@ -4,8 +4,8 @@ import PortfolioProjects from "../components/PortfolioProjects.vue";
 
 <template>
   <div
-    class="overflow-x-hidden"
-    style="min-height: 100vw; background: var(--color-2)"
+    class="h-fit overflow-x-hidden"
+    style="min-height: 100vh; background: var(--color-2)"
   >
     <!-- Headings -->
     <div
