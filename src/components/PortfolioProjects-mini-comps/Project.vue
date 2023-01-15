@@ -8,7 +8,47 @@ const isHovered = ref(false);
 
 <template>
   <div
-    class="relative overflow-hidden transition-all duration-700"
+    :href="data.link"
+    class="block md:hidden flex flex-col gap-4"
+    v-motion
+    :initial="{
+      opacity: 0,
+      y: 50,
+    }"
+    :enter="{
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 300 * index,
+        duration: 500,
+        type: 'keyframes',
+        ease: 'easeOut',
+      },
+    }"
+  >
+    <img
+      :src="data.image"
+      alt="project-first-view"
+      :style="{ boxShadow: '5px 5px 5px var(--color-1)' }"
+    />
+    <div class="w-full flex justify-between uppercase text-sm">
+      <a
+        :href="data.link"
+        class="p-2 rounded-md"
+        style="background: var(--color-4)"
+        >Hosted Site</a
+      >
+      <a
+        :href="data.github"
+        class="p-2 rounded-md"
+        style="background: var(--color-4)"
+        >Github Repo</a
+      >
+    </div>
+  </div>
+
+  <div
+    class="hidden md:block relative overflow-hidden transition-all duration-700"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
     :style="{

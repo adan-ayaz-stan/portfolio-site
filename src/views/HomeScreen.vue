@@ -10,13 +10,13 @@ function closeModal() {
 </script>
 
 <template>
-  <div class="main-home w-screen sm:h-fit relative py-16 lg:py-0">
+  <div class="main-home w-screen h-fit relative py-16 lg:py-0">
     <Transition name="fade">
       <MoreAboutMe v-if="showModal" :custom="closeModal" />
     </Transition>
 
     <div
-      class="h-screen w-full flex flex-col md:flex-row items-center justify-center"
+      class="h-fit w-full flex flex-col md:flex-row items-center justify-center"
     >
       <!-- Profile -->
       <div class="relative w-9/12 lg:w-1/2 flex items-center justify-end">
@@ -95,12 +95,14 @@ function closeModal() {
 <style scoped>
 .main-home {
   min-height: 100vh;
+  height: fit-content;
   background: linear-gradient(75deg, var(--color-1) 24.9%, var(--color-2) 25%);
   overflow: hidden;
 }
 @media only screen and (max-width: 810px) {
   .main-home {
     background: var(--color-2);
+    height: fit-content;
   }
 }
 
