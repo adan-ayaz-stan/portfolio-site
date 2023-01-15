@@ -1,6 +1,4 @@
 <script setup>
-import Sidebar from "../components/Sidebar.vue";
-import CurtainVue from "../components/Curtain.vue";
 import MoreAboutMe from "../components/MoreAboutMe.vue";
 import { ref } from "vue";
 
@@ -13,8 +11,6 @@ function closeModal() {
 
 <template>
   <div class="main-home w-screen sm:h-fit relative py-16 lg:py-0">
-    <CurtainVue />
-
     <Transition name="fade">
       <MoreAboutMe v-if="showModal" :custom="closeModal" />
     </Transition>
@@ -39,9 +35,35 @@ function closeModal() {
         class="main-screen-content w-full lg:w-1/2 mx-auto gap-4 flex flex-col justify-center p-4"
       >
         <div class="flex flex-row items-center lg:flex-row lg:gap-2">
-          <h1>
-            <v-icon name="gi-card-ace-spades" scale="5.5" />
-          </h1>
+          <!--  -->
+
+          <!--  -->
+
+          <!-- FLIP CARD -->
+          <div class="flip-card">
+            <div
+              class="flip-card-inner"
+              v-motion
+              :initial="{ rotateY: 0 }"
+              :enter="{
+                rotateY: 360,
+                transition: {
+                  duration: 10000,
+                  repeat: Infinity,
+                  repeatType: 'mirror',
+                  type: 'keyframes',
+                  ease: 'linear',
+                },
+              }"
+            >
+              <div class="flip-card-front">
+                <v-icon name="gi-card-ace-spades" scale="5.5" />
+              </div>
+              <div class="flip-card-back">
+                <v-icon name="gi-card-king-spades" scale="5.5" />
+              </div>
+            </div>
+          </div>
 
           <div class="text-sm lg:text-xl">
             <h1>Adan Ayaz</h1>
@@ -49,11 +71,13 @@ function closeModal() {
           </div>
         </div>
 
-        <p class="w-full lg:w-5/6 leading-normal lg:leading-loose">
-          I'm a Pakistan based web designer & front‑end developer focused on
-          crafting clean & user‑friendly experiences, I am passionate about
-          building excellent software that improves the lives of those around
-          me.
+        <p
+          class="w-full lg:w-5/6 text-center lg:text-left px-4 lg:px-0 leading-normal lg:leading-loose"
+        >
+          I'm a front-end developer and web designer from Asia that focuses on
+          creating aesthetically pleasing and intuitive user interfaces. I'm
+          passionate about creating top-notch software that makes the lives of
+          those around me better.
         </p>
 
         <button
@@ -151,5 +175,42 @@ function closeModal() {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* FLIP CARD */
+.flip-card {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: var(--color-2);
+  color: var(--color-1);
+}
+
+.flip-card-back {
+  background-color: var(--color-2);
+  color: var(--color-1);
+  transform: rotateY(180deg);
 }
 </style>

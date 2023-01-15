@@ -1,5 +1,21 @@
 <template>
-  <div class="splash-screen" id="splash-screen">
+  <div
+    class="splash-screen"
+    id="splash-screen"
+    v-motion
+    :initial="{
+      top: '0%',
+    }"
+    :enter="{
+      top: '100%',
+      transition: {
+        delay: 100,
+        duration: 600,
+        type: 'keyframes',
+        ease: 'easeInOut',
+      },
+    }"
+  >
     <!-- Add your splash screen content here -->
   </div>
 </template>
@@ -7,7 +23,7 @@
 <style>
 .splash-screen {
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -17,11 +33,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  transition: all ease-out 0.4s;
 }
 </style>
 
-<script setup>
-setTimeout(() => {
-  document.getElementById("splash-screen").style.top = "100%";
-}, 800);
-</script>
+<script setup></script>

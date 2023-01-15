@@ -32,11 +32,11 @@ const sampleArray = [
     iconName: "bi-briefcase-fill",
     activeValue: "portfolio",
   },
-  {
-    text: "Tweets",
-    iconName: "io-chatbubbles-sharp",
-    activeValue: "tweets",
-  },
+  // {
+  //   text: "Tweets",
+  //   iconName: "io-chatbubbles-sharp",
+  //   activeValue: "tweets",
+  // },
 ];
 
 const theme = ref("light");

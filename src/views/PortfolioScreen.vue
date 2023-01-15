@@ -3,7 +3,10 @@ import PortfolioProjects from "../components/PortfolioProjects.vue";
 </script>
 
 <template>
-  <div class="min-h-screen" style="background: var(--color-2)">
+  <div
+    class="min-h-screen overflow-x-hidden"
+    style="background: var(--color-2)"
+  >
     <!-- Headings -->
     <div
       v-motion

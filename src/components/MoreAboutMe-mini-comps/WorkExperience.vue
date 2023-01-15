@@ -111,21 +111,7 @@ const workExperienceData = [
             class="flex flex-col gap-2 list-disc"
             style="font-family: 'Daikon Light'"
           >
-            <li
-              v-for="li in item.responsibilities"
-              class="text-sm lg:text-md"
-              v-motion
-              :initial="{ y: 100, opacity: 0 }"
-              :visibleOnce="{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 700,
-                  type: 'keyframes',
-                  ease: 'easeOut',
-                },
-              }"
-            >
+            <li v-for="li in item.responsibilities" class="text-sm lg:text-md">
               {{ li }}
             </li>
           </ul>

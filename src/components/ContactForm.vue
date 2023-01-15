@@ -19,11 +19,11 @@ const sampleData = [
 
 const linksData = [
   {
-    link: "https://github.com/adan-ayaz-stan",
+    link: "https://www.linkedin.com/in/adan-ayaz-821025191/",
     iconName: "co-linkedin-in",
   },
   {
-    link: "https://www.linkedin.com/in/adan-ayaz-821025191/",
+    link: "https://github.com/adan-ayaz-stan",
     iconName: "la-github-alt",
   },
   {
@@ -79,30 +79,54 @@ const linksData = [
     </div>
 
     <!-- Contact Form -->
-    <form class="col-span-2 flex flex-col gap-6 pb-16 lg:pb-0">
+    <form
+      v-motion
+      :initial="{ x: 100, opacity: 0 }"
+      :enter="{
+        x: 0,
+        opacity: 1,
+        transition: {
+          delay: 500,
+          duration: 700,
+          type: 'keyframes',
+          ease: 'easeOut',
+        },
+      }"
+      class="col-span-2 flex flex-col gap-6 pb-16 lg:pb-0"
+      action="https://formspree.io/f/xrgvbgnw"
+      method="POST"
+    >
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <input
           type="text"
+          name="firstname"
           placeholder="FIRST NAME"
           class="px-5 py-3 rounded-full text-sm"
+          required
         />
 
         <input
           type="text"
+          name="lastname"
           placeholder="LAST NAME"
           class="px-5 py-3 rounded-full text-sm"
+          required
         />
       </div>
 
       <input
         type="text"
+        name="subject"
         placeholder="YOUR SUBJECT"
         class="px-5 py-3 rounded-full text-sm"
+        required
       />
 
       <textarea
+        name="message"
         placeholder="YOUR MESSAGE"
         class="px-5 py-3 rounded-3xl text-sm resize-y"
+        required
         rows="10"
       />
 
@@ -114,6 +138,7 @@ const linksData = [
         <v-icon name="co-telegram-plane" class="arrow-right p-2" scale="2.5" />
       </button>
     </form>
+    <!-- FORM END -->
   </div>
 </template>
 
