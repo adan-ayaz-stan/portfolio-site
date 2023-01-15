@@ -3,7 +3,10 @@ import ContactForm from "../components/ContactForm.vue";
 </script>
 
 <template>
-  <div class="h-fit lg:h-screen" style="background: var(--color-2)">
+  <div
+    class="h-fit lg:h-screen overflow-hidden"
+    style="background: var(--color-2)"
+  >
     <!-- Headings -->
     <div
       v-motion
