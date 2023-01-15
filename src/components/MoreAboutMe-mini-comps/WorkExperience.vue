@@ -71,6 +71,18 @@ const workExperienceData = [
       <div
         class="flex flex-row p-4 gap-4 pb-16"
         v-for="item in workExperienceData"
+        v-motion
+        :initial="{ y: 100, opacity: 0 }"
+        :visibleOnce="{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 200,
+            duration: 700,
+            type: 'keyframes',
+            ease: 'easeOut',
+          },
+        }"
       >
         <div
           class="relative"
