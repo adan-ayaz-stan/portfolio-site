@@ -10,7 +10,7 @@ function closeModal() {
 </script>
 
 <template>
-  <div class="main-home w-screen h-fit relative py-16 lg:py-0">
+  <div class="main-home w-screen h-fit relative py-16">
     <Transition name="fade">
       <MoreAboutMe v-if="showModal" :custom="closeModal" />
     </Transition>
