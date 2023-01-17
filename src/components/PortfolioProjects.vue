@@ -29,13 +29,13 @@ interface project {
 }
 
 const projectsData: project[] = [
-  // {
-  //   name: "HOD Cult Site",
-  //   link: "https://hod-cult-website.vercel.app/",
-  //   github: "https://github.com/adan-ayaz-stan/hod-cult-website",
-  //   image:
-  //     "https://i.ibb.co/hWVJdNK/Screenshot-2023-01-14-at-13-29-54-HOD-Gatekeeper.png",
-  // },
+  {
+    name: "Authentication Site",
+    link: "https://authentication-site.vercel.app/",
+    github: "https://github.com/adan-ayaz-stan/authentication-site",
+    image:
+      "https://i.ibb.co/6NgHZsR/Screenshot-2023-01-17-at-20-11-55-Create-Next-App.png",
+  },
   {
     name: "The Bottle Haus Project",
     link: "https://adan-ayaz-project-03.vercel.app/",

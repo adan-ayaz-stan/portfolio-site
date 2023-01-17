@@ -3,7 +3,7 @@ import projectPersonalProjects from "./projectPersonalProjects.vue";
 
 const projectsData = [
   {
-    name: "HOD Cult Site",
+    name: "Authentication Site",
     tasks: [
       "Build Landing Page",
       "Code landing page logic",
