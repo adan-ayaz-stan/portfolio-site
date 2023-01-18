@@ -26,8 +26,8 @@ const projectsData = [
     ],
     goal: "Understanding the general procedure of authentication in web applications.",
     link: {
-      github: "https://github.com/adan-ayaz-stan/hod-cult-website",
-      hosted: "https://hod-cult-website.vercel.app/",
+      github: "https://github.com/adan-ayaz-stan/authentication-site",
+      hosted: "https://authentication-site.vercel.app/",
     },
   },
   {
