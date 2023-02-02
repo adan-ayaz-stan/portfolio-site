@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import droveAnimatedImage from "../assets/images/drove-animated-site.png";
+import theBottleHausImage from "../assets/images/the-bottle-haus.png";
 import Project from "./PortfolioProjects-mini-comps/Project.vue";
 
 const searchRouteData = [
@@ -30,25 +32,23 @@ interface project {
 
 const projectsData: project[] = [
   {
-    name: "Authentication Site",
-    link: "https://authentication-site.vercel.app/",
-    github: "https://github.com/adan-ayaz-stan/authentication-site",
+    name: "Kanban Ticketing System",
+    link: "https://kanban-ticketing-system.vercel.app",
+    github: "https://github.com/adan-ayaz-stan/kanban-ticketing-system",
     image:
-      "https://i.ibb.co/6NgHZsR/Screenshot-2023-01-17-at-20-11-55-Create-Next-App.png",
+      "https://i.vimeocdn.com/video/1146040420-8f3a3a1123505326c53195e12cd6acd472f07888341127f13add2c5380d51682-d_640x360.jpg",
   },
   {
     name: "The Bottle Haus Project",
     link: "https://adan-ayaz-project-03.vercel.app/",
     github: "https://github.com/adan-ayaz-stan/the-bottle-haus-project",
-    image:
-      "https://i.ibb.co/kh3Wz5G/Screenshot-2023-01-14-at-16-03-43-The-Bottle-Haus-Home.png",
+    image: theBottleHausImage,
   },
   {
     name: "Drove Animated Site",
     link: "https://drove-animated-site.vercel.app/",
     github: "https://github.com/adan-ayaz-stan/drove-animated-site",
-    image:
-      "https://i.ibb.co/Gxr9Fbb/Screenshot-2023-01-14-at-16-06-57-Drove-Home.png",
+    image: droveAnimatedImage,
   },
 ];
 

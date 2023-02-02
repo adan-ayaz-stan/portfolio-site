@@ -28,8 +28,10 @@ const isHovered = ref(false);
   >
     <img
       :src="data.image"
-      alt="project-first-view"
+      :alt="data.name"
       :style="{ boxShadow: '5px 5px 5px var(--color-1)' }"
+      loading="lazy"
+      class="object-cover"
     />
     <div class="w-full flex justify-between uppercase text-sm">
       <a
@@ -48,7 +50,7 @@ const isHovered = ref(false);
   </div>
 
   <div
-    class="hidden md:block relative overflow-hidden transition-all duration-700"
+    class="min-h-[200px] max-h-[300px] hidden md:block relative overflow-hidden transition-all duration-700"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
     :style="{
@@ -72,7 +74,7 @@ const isHovered = ref(false);
       },
     }"
   >
-    <img :src="data.image" alt="project-first-view" />
+    <img :src="data.image" :alt="data.name" class="object-cover" />
 
     <!-- Details -->
     <div

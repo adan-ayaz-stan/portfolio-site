@@ -83,6 +83,15 @@
       </div>
     </div>
     <!--  -->
+
+    <a
+      href="https://mega.nz/file/JcI3RAbY#rD5TVDQyQzSLpZoFrlSx7f0VeNCwikclfYlpn2QXONg"
+      download
+      class="more-about-me-button w-fit flex flex-row items-center gap-2"
+    >
+      <p>Download CV</p>
+      <v-icon name="bi-arrow-right-short" class="arrow-right" scale="2.5" />
+    </a>
   </div>
   <!--  -->
 </template>
@@ -104,6 +113,60 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.more-about-me-button {
+  position: relative;
+
+  text-transform: uppercase;
+  font-family: "Daikon Bold";
+  font-size: 0.9em;
+
+  padding: 0;
+  padding-left: 1.5em;
+
+  margin: 1.5em;
+
+  color: var(--color-3);
+  background: var(--color-2);
+
+  border: solid 1px var(--color-1);
+  border-right: 0;
+  border-radius: 999px;
+
+  transition: all ease 0.4s;
+
+  overflow: hidden;
+}
+
+/* More button ::before */
+.more-about-me-button::before {
+  content: "";
+
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  background: var(--color-1);
+
+  transition: all cubic-bezier(0.69, -0.03, 0.39, 0.97) 0.7s;
+
+  border-radius: 999px;
+}
+.more-about-me-button:hover::before {
+  left: 0;
+}
+
+.more-about-me-button p,
+.more-about-me-button svg {
+  z-index: 1;
+}
+.more-about-me-button .arrow-right {
+  background-color: var(--color-1);
+  border-radius: 999px;
 }
 </style>
 

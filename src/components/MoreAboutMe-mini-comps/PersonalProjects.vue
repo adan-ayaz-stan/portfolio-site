@@ -3,37 +3,24 @@ import projectPersonalProjects from "./projectPersonalProjects.vue";
 
 const projectsData = [
   {
-    name: "Authentication Site",
+    name: "Kanban Ticketing System",
     tasks: [
-      "Build Landing Page",
-      "Code landing page logic",
-      "Apply cookies logic",
-      "Apply form validation",
-      "Code authentication logic",
-      "Set login page",
-      "Hash passwords",
-      "Store logins in database",
+      "Plan and design the database structure for the application",
+      "Apply authentication and authorization to the application",
+      "Build logic to allow users to create projects",
+      "Code logic for task creation, task editing and task deletion",
+      "Allow users to connect to each other inside the application",
     ],
-    technologies: [
-      "NextJS",
-      "React",
-      "Recoil",
-      "Firebase",
-      "jsonwebtoken",
-      "bcrypt",
-      "cookies-next",
-      "formik",
-    ],
-    goal: "Understanding the general procedure of authentication in web applications.",
+    technologies: ["NextJS", "React", "Supabase"],
+    goal: "Create a real world project to showcase my abilities to work on large applications.",
     link: {
-      github: "https://github.com/adan-ayaz-stan/authentication-site",
-      hosted: "https://authentication-site.vercel.app/",
+      github: "https://github.com/adan-ayaz-stan/kanban-ticketing-system",
+      hosted: "https://kanban-ticketing-system.vercel.app/",
     },
   },
   {
     name: "The Bottle Haus Project",
     tasks: [
-      "Built pages in several routes in NextJS",
       "Fetching data from MongoDB database + rendering",
       "Applied filtering in the shopping route",
       "Applied dynamic routes for products",
@@ -73,6 +60,31 @@ const projectsData = [
     link: {
       github: "https://github.com/adan-ayaz-stan/drove-animated-site",
       hosted: "http://drove-animated-site.vercel.app/",
+    },
+  },
+  {
+    name: "Authentication Page",
+    tasks: [
+      "Apply cookies logic",
+      "Code authentication logic",
+      "Set login page",
+      "Hash passwords",
+      "Store logins in database",
+    ],
+    technologies: [
+      "NextJS",
+      "React",
+      "Recoil",
+      "Firebase",
+      "jsonwebtoken",
+      "bcrypt",
+      "cookies-next",
+      "formik",
+    ],
+    goal: "Understanding the general procedure of authentication in web applications.",
+    link: {
+      github: "https://github.com/adan-ayaz-stan/authentication-site",
+      hosted: "https://authentication-site.vercel.app/",
     },
   },
 ];
