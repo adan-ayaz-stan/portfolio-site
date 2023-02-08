@@ -2,6 +2,8 @@
 import { ref } from "vue";
 import droveAnimatedImage from "../assets/images/drove-animated-site.png";
 import theBottleHausImage from "../assets/images/the-bottle-haus.png";
+import kanbanTicketingSystemImage from "../assets/images/kanban-ticketing-system.png";
+import conferenceNuxtImage from "../assets/images/conference-nuxt.png";
 import Project from "./PortfolioProjects-mini-comps/Project.vue";
 
 const searchRouteData = [
@@ -32,11 +34,16 @@ interface project {
 
 const projectsData: project[] = [
   {
+    name: "Nuxt Conference App",
+    link: "https://kanban-ticketing-system.vercel.app",
+    github: "https://github.com/adan-ayaz-stan/kanban-ticketing-system",
+    image: conferenceNuxtImage,
+  },
+  {
     name: "Kanban Ticketing System",
     link: "https://kanban-ticketing-system.vercel.app",
     github: "https://github.com/adan-ayaz-stan/kanban-ticketing-system",
-    image:
-      "https://i.vimeocdn.com/video/1146040420-8f3a3a1123505326c53195e12cd6acd472f07888341127f13add2c5380d51682-d_640x360.jpg",
+    image: kanbanTicketingSystemImage,
   },
   {
     name: "The Bottle Haus Project",
