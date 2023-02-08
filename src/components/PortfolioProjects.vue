@@ -35,8 +35,8 @@ interface project {
 const projectsData: project[] = [
   {
     name: "Nuxt Conference App",
-    link: "https://kanban-ticketing-system.vercel.app",
-    github: "https://github.com/adan-ayaz-stan/kanban-ticketing-system",
+    link: "https://conference-nuxt.vercel.app",
+    github: "https://github.com/adan-ayaz-stan/conference-app-nuxt",
     image: conferenceNuxtImage,
   },
   {

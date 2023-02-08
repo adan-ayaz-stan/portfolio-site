@@ -96,15 +96,6 @@ const { data } = defineProps(["data"]);
         </ul>
       </div>
 
-      <p class="pt-4">
-        <span
-          class="uppercase tracking-wider"
-          style="font-family: 'Daikon Bold'"
-          >Goal of the project:
-        </span>
-        <span class="text-green-500">{{ data.goal }}</span>
-      </p>
-
       <div class="flex flex-row gap-2 underline pb-8">
         <a :href="data.link.github">Github Repository</a>
         <a :href="data.link.hosted">Hosted Site</a>

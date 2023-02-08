@@ -3,6 +3,29 @@ import projectPersonalProjects from "./projectPersonalProjects.vue";
 
 const projectsData = [
   {
+    name: "Conference App Nuxt",
+    tasks: [
+      "Plan and design the database structure for the application",
+      "Apply authentication to the application",
+      "Build logic to allow users to create conferences",
+      "Allow users to interact with the conference and alter it's state",
+    ],
+    technologies: [
+      "Nuxt 3",
+      "pinia",
+      "aos",
+      "trpc",
+      "prisma",
+      "zod",
+      "formkit",
+      "Supabase",
+    ],
+    link: {
+      github: "https://github.com/adan-ayaz-stan/conference-app-nuxt",
+      hosted: "https://conference-nuxt.vercel.app/",
+    },
+  },
+  {
     name: "Kanban Ticketing System",
     tasks: [
       "Plan and design the database structure for the application",
@@ -11,8 +34,7 @@ const projectsData = [
       "Code logic for task creation, task editing and task deletion",
       "Allow users to connect to each other inside the application",
     ],
-    technologies: ["NextJS", "React", "Supabase"],
-    goal: "Create a real world project to showcase my abilities to work on large applications.",
+    technologies: ["NextJS", "React", "React Query", "Supabase"],
     link: {
       github: "https://github.com/adan-ayaz-stan/kanban-ticketing-system",
       hosted: "https://kanban-ticketing-system.vercel.app/",
@@ -34,7 +56,6 @@ const projectsData = [
       "Swiper",
       "react-hook-form",
     ],
-    goal: "Analyzing the challenges faced in building an e-commerce site.",
     link: {
       github: "https://github.com/adan-ayaz-stan/the-bottle-haus-project",
       hosted: "https://adan-ayaz-project-03.vercel.app/",
@@ -60,31 +81,6 @@ const projectsData = [
     link: {
       github: "https://github.com/adan-ayaz-stan/drove-animated-site",
       hosted: "http://drove-animated-site.vercel.app/",
-    },
-  },
-  {
-    name: "Authentication Page",
-    tasks: [
-      "Apply cookies logic",
-      "Code authentication logic",
-      "Set login page",
-      "Hash passwords",
-      "Store logins in database",
-    ],
-    technologies: [
-      "NextJS",
-      "React",
-      "Recoil",
-      "Firebase",
-      "jsonwebtoken",
-      "bcrypt",
-      "cookies-next",
-      "formik",
-    ],
-    goal: "Understanding the general procedure of authentication in web applications.",
-    link: {
-      github: "https://github.com/adan-ayaz-stan/authentication-site",
-      hosted: "https://authentication-site.vercel.app/",
     },
   },
 ];
