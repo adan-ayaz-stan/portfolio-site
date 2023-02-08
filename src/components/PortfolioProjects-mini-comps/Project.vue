@@ -124,6 +124,7 @@ const isHovered = ref(false);
               damping: 20,
             },
           }"
+          target="_blank"
         >
           Github
         </a>
@@ -148,6 +149,7 @@ const isHovered = ref(false);
               damping: 20,
             },
           }"
+          target="_blank"
         >
           Hosted Site
         </a>

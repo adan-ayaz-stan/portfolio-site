@@ -97,8 +97,8 @@ const { data } = defineProps(["data"]);
       </div>
 
       <div class="flex flex-row gap-2 underline pb-8">
-        <a :href="data.link.github">Github Repository</a>
-        <a :href="data.link.hosted">Hosted Site</a>
+        <a :href="data.link.github" target="_blank">Github Repository</a>
+        <a :href="data.link.hosted" target="_blank">Hosted Site</a>
       </div>
     </div>
   </div>
