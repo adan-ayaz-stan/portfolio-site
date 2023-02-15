@@ -3,7 +3,9 @@ import { ref } from "vue";
 import droveAnimatedImage from "../assets/images/drove-animated-site.png";
 import theBottleHausImage from "../assets/images/the-bottle-haus.png";
 import kanbanTicketingSystemImage from "../assets/images/kanban-ticketing-system.png";
+import nuxtChatImage from "../assets/images/nuxt-chat.png";
 import conferenceNuxtImage from "../assets/images/conference-nuxt.png";
+
 import Project from "./PortfolioProjects-mini-comps/Project.vue";
 
 const searchRouteData = [
@@ -38,6 +40,12 @@ const projectsData: project[] = [
     link: "https://conference-nuxt.vercel.app",
     github: "https://github.com/adan-ayaz-stan/conference-app-nuxt",
     image: conferenceNuxtImage,
+  },
+  {
+    name: "Nuxt Chat Application",
+    link: "https://nuxt-chat-application.vercel.app",
+    github: "https://github.com/adan-ayaz-stan/nuxt-chat-application",
+    image: nuxtChatImage,
   },
   {
     name: "Kanban Ticketing System",

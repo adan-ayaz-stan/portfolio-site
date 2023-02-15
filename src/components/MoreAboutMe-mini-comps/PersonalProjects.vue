@@ -26,6 +26,25 @@ const projectsData = [
     },
   },
   {
+    name: "Nuxt Chat Application",
+    tasks: [
+      "Plan and design the database structure for the application",
+      "Apply authentication to the application",
+      "Build logic to allow users to create chat sessions",
+      "Allow users to chat with each other through messages",
+    ],
+    technologies: [
+      "Nuxt 3",
+      "formkit",
+      "Supabase",
+      "Tailwind CSS"
+    ],
+    link: {
+      github: "https://github.com/adan-ayaz-stan/nuxt-chat-application",
+      hosted: "https://nuxt-chat-application.vercel.app/",
+    },
+  },
+  {
     name: "Kanban Ticketing System",
     tasks: [
       "Plan and design the database structure for the application",

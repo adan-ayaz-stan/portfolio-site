@@ -51,30 +51,16 @@ const workExperienceData = [
       Work Experience
     </h1>
 
-    <div
-      class="grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-8 gap-4"
-      v-motion
-      :initial="{ y: 100, opacity: 0 }"
-      :enter="{
-        y: 0,
-        opacity: 1,
-        transition: {
-          delay: 1500,
-          duration: 700,
-          type: 'keyframes',
-          ease: 'easeOut',
-        },
-      }"
-    >
+    <div class="grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-8 gap-4">
       <!-- Single Work experience component -->
 
       <div
         class="flex flex-row p-4 gap-4 pb-16"
-        v-for="item in workExperienceData"
+        v-for="(item, ind) in workExperienceData"
         v-motion
-        :initial="{ y: 100, opacity: 0 }"
+        :initial="{ x: ind % 2 == 0 ? -100 : 100, opacity: 0 }"
         :visibleOnce="{
-          y: 0,
+          x: 0,
           opacity: 1,
           transition: {
             delay: 200,
