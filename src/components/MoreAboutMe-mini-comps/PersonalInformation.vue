@@ -85,7 +85,7 @@
     <!--  -->
 
     <a
-      href="https://mega.nz/file/FIZnGTrC#HzEEzu8dvwo04WWLL-_gjt-oi2VPXW4sG3AJeOkN0bM"
+      href="https://mega.nz/file/RIAVzJqQ#wn0AbQEoetNXWGSf9F2psrDC4AibllbBYXrm0U2RKm8"
       download
       class="more-about-me-button w-fit flex flex-row items-center gap-2"
     >
